@@ -58,17 +58,15 @@
       align-items: center;
       padding: 120px 48px 80px;
       overflow: hidden;
-      background:
-        radial-gradient(circle at 20% 20%, rgba(255,255,255,.16), transparent 30%),
-        linear-gradient(to bottom, rgba(0,0,0,.2), rgba(0,0,0,.92)),
-        url('https://images.unsplash.com/photo-1485846234645-a62644f84728?q=80&w=2400&auto=format&fit=crop') center/cover;
+      background: #050505;
     }
 
     .hero::after {
       content: "";
       position: absolute;
       inset: 0;
-      background: rgba(0,0,0,.45);
+      background: rgba(0,0,0,.12);
+      pointer-events: none;
     }
 
     .hero-poster {
@@ -426,8 +424,8 @@
       height: 100%;
       object-fit: cover;
       z-index: 0;
-      opacity: .34;
-      filter: grayscale(.15) contrast(1.08) brightness(.72);
+      opacity: .62;
+      filter: grayscale(.08) contrast(1.08) brightness(.88);
       pointer-events: none;
     }
 
@@ -436,8 +434,8 @@
       inset: 0;
       z-index: 1;
       background:
-        linear-gradient(to right, rgba(0,0,0,.76), rgba(0,0,0,.48), rgba(0,0,0,.25)),
-        linear-gradient(to bottom, rgba(0,0,0,.18), rgba(0,0,0,.92));
+        linear-gradient(to right, rgba(0,0,0,.72), rgba(0,0,0,.42), rgba(0,0,0,.18)),
+        linear-gradient(to bottom, rgba(0,0,0,.10), rgba(0,0,0,.78));
       pointer-events: none;
     }
 
@@ -447,15 +445,21 @@
 
     .hero-inner {
       z-index: 2;
-      animation: cinematicFadeIn 1.15s ease-out both;
+      animation: cinematicFadeIn .9s ease-out both;
     }
 
     @keyframes cinematicFadeIn {
       from {
         opacity: 0;
-        transform: translateY(22px);
-        filter: blur(4px);
+        transform: translateY(16px);
+        filter: blur(2px);
       }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+      }
+    }
       to {
         opacity: 1;
         transform: translateY(0);
@@ -468,14 +472,30 @@
         animation: none;
       }
       .hero-bg-video {
-        display: none;
-      }
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 0;
+      opacity: .62;
+      filter: grayscale(.08) contrast(1.08) brightness(.88);
+      pointer-events: none;
+    }
     }
 
     @media (max-width: 820px) {
       .hero-bg-video {
-        opacity: .24;
-      }
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 0;
+      opacity: .62;
+      filter: grayscale(.08) contrast(1.08) brightness(.88);
+      pointer-events: none;
+    }
     }
 
   </style>
