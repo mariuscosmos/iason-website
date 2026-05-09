@@ -388,7 +388,40 @@
       .section-head { align-items: start; flex-direction: column; }
       footer { padding: 28px 24px; flex-direction: column; }
     }
-  </style>
+ /* Remove unwanted focus / selection outlines around poster artwork */
+a,
+a:focus,
+a:active,
+a:visited,
+a:focus-visible,
+.video-card,
+.video-card:focus,
+.video-card:active,
+.video-card:focus-visible,
+.trailer-link-card,
+.trailer-link-card:focus,
+.trailer-link-card:active,
+.trailer-link-card:focus-visible,
+.poster-card,
+.poster-card:focus,
+.poster-card:active,
+.poster-card:focus-visible,
+.poster-card img,
+img {
+  outline: 0 !important;
+  border: 0 !important;
+  box-shadow: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Restore intentional designed shadows only */
+.video-card {
+  box-shadow: 0 30px 80px rgba(0,0,0,.4);
+}
+
+.poster-card {
+  box-shadow: 0 26px 70px rgba(0,0,0,.38);
+} </style>
 </head>
 <body>
   <nav class="nav">
