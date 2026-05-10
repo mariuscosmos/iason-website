@@ -534,7 +534,42 @@
       pointer-events: none;
     }
     }
+@media (max-width: 760px) {
 
+  .about::before {
+    width: 100%;
+    right: 0;
+    left: 0;
+
+    background:
+      linear-gradient(
+        180deg,
+        rgba(10,10,10,.88) 0%,
+        rgba(10,10,10,.72) 35%,
+        rgba(10,10,10,.88) 100%
+      ),
+      url('iason-about-portrait.png') center top / cover no-repeat;
+
+    opacity: .16;
+
+    filter:
+      grayscale(1)
+      contrast(1.08)
+      brightness(.72);
+
+    z-index: 0;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .about .container {
+    position: relative;
+    z-index: 2;
+  }
+}
   </style>
 </head>
 <body>
