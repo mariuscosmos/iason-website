@@ -244,21 +244,56 @@
     }
 
     .about {
+      position: relative;
+      overflow: hidden;
       background: var(--panel);
+      isolation: isolate;
+    }
+
+    .about::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: min(58vw, 760px);
+      background:
+        linear-gradient(90deg, var(--panel) 0%, rgba(18,18,18,.72) 34%, rgba(18,18,18,.20) 72%, rgba(18,18,18,.50) 100%),
+        linear-gradient(180deg, rgba(18,18,18,.85) 0%, rgba(18,18,18,.16) 38%, rgba(18,18,18,.88) 100%),
+        url('iason-about-portrait.png') center right / cover no-repeat;
+      opacity: .34;
+      filter: grayscale(1) contrast(1.08) brightness(.78);
+      z-index: -2;
+      pointer-events: none;
+    }
+
+    .about::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 72% 45%, rgba(255,255,255,.05), transparent 34%);
+      z-index: -1;
+      pointer-events: none;
     }
 
     .about-grid {
+      position: relative;
       display: grid;
       grid-template-columns: .8fr 1.4fr;
       gap: 64px;
       align-items: start;
     }
 
+    .bio {
+      max-width: 760px;
+    }
+
     .bio p {
-      color: var(--muted);
+      color: rgba(244,244,240,.78);
       font-size: 19px;
       line-height: 1.72;
       margin: 0 0 24px;
+      text-shadow: 0 2px 24px rgba(0,0,0,.55);
     }
 
     .cards {
