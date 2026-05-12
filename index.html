@@ -249,37 +249,23 @@
       background: var(--panel);
       isolation: isolate;
     }
-@media (max-width: 760px) {
 
-  .about::before {
-
-    inset: 0;
-
-    width: 100%;
-
-    background:
-      linear-gradient(
-        180deg,
-        rgba(8,8,8,.82) 0%,
-        rgba(8,8,8,.58) 28%,
-        rgba(8,8,8,.78) 100%
-      ),
-      url('iason-about-portrait.png');
-
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center 65%;
-
-    opacity: .22;
-
-    filter:
-      grayscale(1)
-      contrast(1.02)
-      brightness(.72);
-
-    z-index: 0;
-  }
-}
+    .about::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: min(58vw, 760px);
+      background:
+        linear-gradient(90deg, var(--panel) 0%, rgba(18,18,18,.72) 34%, rgba(18,18,18,.20) 72%, rgba(18,18,18,.50) 100%),
+        linear-gradient(180deg, rgba(18,18,18,.85) 0%, rgba(18,18,18,.16) 38%, rgba(18,18,18,.88) 100%),
+        url('iason-about-portrait.png') center right / cover no-repeat;
+      opacity: .34;
+      filter: grayscale(1) contrast(1.08) brightness(.78);
+      z-index: 0;
+      pointer-events: none;
+    }
 
     .about::after {
       content: "";
