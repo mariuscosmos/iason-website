@@ -244,7 +244,39 @@
     }
 
     .about {
+      position: relative;
+      overflow: hidden;
+      isolation: isolate;
       background: var(--panel);
+    }
+
+    .about-bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center right;
+      opacity: .24;
+      filter: grayscale(1) contrast(1.06) brightness(.72);
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .about::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(
+          90deg,
+          rgba(18,18,18,.96) 0%,
+          rgba(18,18,18,.88) 28%,
+          rgba(18,18,18,.62) 56%,
+          rgba(18,18,18,.82) 100%
+        );
+      z-index: 1;
+      pointer-events: none;
     }
 
     .about .container {
@@ -607,6 +639,26 @@
       }
     }
 
+  
+
+    @media (max-width: 900px) {
+      .about-bg {
+        object-fit: contain;
+        object-position: center top;
+        opacity: .26;
+      }
+
+      .about::after {
+        background:
+          linear-gradient(
+            180deg,
+            rgba(18,18,18,.94) 0%,
+            rgba(18,18,18,.72) 38%,
+            rgba(18,18,18,.86) 100%
+          );
+      }
+    }
+
   </style>
 </head>
 <body>
@@ -666,6 +718,7 @@
   </section>
 
   <section class="about" id="about">
+    <img class="about-bg" src="iason-about-portrait.png" alt="" aria-hidden="true">
     <div class="container about-grid">
       <div>
         <div class="eyebrow">About</div>
