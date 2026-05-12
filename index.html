@@ -546,6 +546,28 @@
       border: 0;
     }
 
+  
+
+    /* Robust mobile-friendly YouTube showreel */
+    .showreel-wrap {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background: #000;
+      border-radius: 30px;
+      overflow: hidden;
+    }
+
+    .showreel-wrap iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+      display: block;
+      background: #000;
+    }
+
   </style>
 </head>
 <body>
@@ -638,9 +660,29 @@
 
         <div class="showreel-wrap">
           <iframe
-            src="https://www.youtube.com/embed/3dVVNlWgZdg?autoplay=1&mute=1&loop=1&playlist=3dVVNlWgZdg&playsinline=1&rel=0&modestbranding=1"
+            srcdoc="
+              <style>
+                *{box-sizing:border-box}
+                body{margin:0;background:#000;font-family:Arial,sans-serif}
+                a{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:
+                  linear-gradient(180deg,rgba(0,0,0,.16),rgba(0,0,0,.58)),
+                  url('https://i.ytimg.com/vi/3dVVNlWgZdg/maxresdefault.jpg') center/cover no-repeat;color:white;text-decoration:none}
+                .play{width:82px;height:82px;border-radius:50%;border:1px solid rgba(255,255,255,.65);
+                  display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,.34);
+                  box-shadow:0 20px 60px rgba(0,0,0,.55)}
+                .play:before{content:'';margin-left:6px;border-left:24px solid #fff;border-top:15px solid transparent;border-bottom:15px solid transparent}
+                .label{position:absolute;left:26px;bottom:24px;letter-spacing:.24em;text-transform:uppercase;font-size:12px;color:rgba(255,255,255,.78)}
+              </style>
+              <a href='https://www.youtube-nocookie.com/embed/3dVVNlWgZdg?autoplay=1&mute=1&playsinline=1&rel=0&modestbranding=1'>
+                <div class='play'></div>
+                <div class='label'>Play visual reel</div>
+              </a>
+            " 
+            src="https://www.youtube-nocookie.com/embed/3dVVNlWgZdg?mute=1&playsinline=1&rel=0&modestbranding=1"
             title="Iason Boiangiu Showreel"
+            loading="lazy"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
             allowfullscreen>
           </iframe>
         </div>
