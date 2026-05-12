@@ -247,6 +247,11 @@
       background: var(--panel);
     }
 
+    .about .container {
+      position: relative;
+      z-index: 2;
+    }
+
     .about-grid {
       display: grid;
       grid-template-columns: .8fr 1.4fr;
@@ -566,6 +571,40 @@
       border: 0;
       display: block;
       background: #000;
+    }
+
+  .about::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(
+          90deg,
+          rgba(0,0,0,.96) 0%,
+          rgba(0,0,0,.88) 28%,
+          rgba(0,0,0,.62) 52%,
+          rgba(0,0,0,.80) 100%
+        ),
+        url('iason-about-portrait.png') center right / cover no-repeat;
+      opacity: .42;
+      filter: grayscale(1) contrast(1.06) brightness(.72);
+      z-index: 0;
+      pointer-events: none;
+    }
+  
+
+    @media (max-width: 900px) {
+      .about::before {
+        background:
+          linear-gradient(
+            180deg,
+            rgba(0,0,0,.92) 0%,
+            rgba(0,0,0,.70) 38%,
+            rgba(0,0,0,.82) 100%
+          ),
+          url('iason-about-portrait.png') center top / contain no-repeat;
+        opacity: .30;
+      }
     }
 
   </style>
