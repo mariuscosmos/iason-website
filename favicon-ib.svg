@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="96" fill="#070707"/>
+  <text x="256" y="296"
+        text-anchor="middle"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-size="164"
+        font-weight="400"
+        letter-spacing="10"
+        fill="#f4f4f0">IB</text>
+  <line x1="156" y1="342" x2="356" y2="342"
+        stroke="#b8b8b0"
+        stroke-width="6"
+        stroke-linecap="round"
+        opacity="0.55"/>
+</svg>
