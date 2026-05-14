@@ -1,15 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-
-<link rel="icon" type="image/x-icon" href="favicon.ico">
-
-<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
-<link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png">
-<link rel="icon" type="image/png" sizes="512x512" href="favicon-512.png">
-
-<link rel="icon" type="image/svg+xml" href="favicon-ib.svg">
-    <meta charset="UTF-8" />
+<head>
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Iason Boiangiu — Filmmaker / Writer</title>
   <meta name="description" content="Iason Boiangiu is a Romanian filmmaker and writer whose films explore memory, estrangement, family, and the quiet emotional fractures of contemporary life." />
@@ -717,6 +709,42 @@
       }
     }
 
+  
+
+    /* Uniform poster sizing */
+    .poster-grid-refined .poster-card {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      min-width: 0;
+    }
+
+    .poster-grid-refined .poster-card img {
+      width: 100%;
+      aspect-ratio: 2 / 3;
+      height: auto;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 22px;
+      display: block;
+      box-shadow: 0 26px 70px rgba(0,0,0,.45);
+      background: #111;
+    }
+
+  
+
+    .bio a {
+      color: var(--text);
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 4px;
+      opacity: .92;
+    }
+
+    .bio a:hover {
+      opacity: 1;
+    }
+
   </style>
 </head>
 <body>
@@ -784,9 +812,9 @@
       </div>
       <div class="bio">
         <p>I’m a Romanian filmmaker currently based in Sheffield, UK.</p>
-        <p>I studied Physics and Philosophy at the University of Sheffield. However, cinema has always been the medium through which I felt most able to express myself and explore intimacy, tension, vulnerability, and the emotional textures of everyday life.</p>
+        <p>I studied Physics and Philosophy at the University of Sheffield, though cinema gradually became the medium through which I felt most able to explore distance, intimacy, silence, and the emotional textures of everyday life.</p>
         <p>I’m drawn to grounded, observational storytelling shaped by atmosphere, restraint, and a sense of poetry within ordinary spaces. My work has been influenced by filmmakers such as Wong Kar Wai, Wim Wenders, Luca Guadagnino, and Martin Scorsese.</p>
-        <p>I began working in film on Radu Jude’s <em>I Do Not Care If We Go Down in History as Barbarians</em> before moving on to a range of productions, from independent grassroots projects to larger professional sets. In 2022, I helped revive and expand the Sheffield Filmmaking Society following the pandemic.</p>
+        <p>I began working in film on Radu Jude’s <a href="https://www.imdb.com/title/tt8506840/" target="_blank" rel="noreferrer"><em>I Do Not Care If We Go Down in History as Barbarians</em></a> before continuing across a range of productions, from independent grassroots projects to larger professional sets. In 2022, I helped revive and expand the Sheffield Filmmaking Society following the pandemic.</p>
         <p>My latest short film, <em>Embers in the Kitchen</em>, is currently being submitted to international festivals, while new projects are in development.</p>
       </div>
     </div>
@@ -806,8 +834,8 @@
       <div class="showreel-feature">
         <div class="showreel-copy">
           <div class="eyebrow">Visual reel</div>
-          <h3>Visual fragments</h3>
-          <p>A silent montage of textures, gestures, and emotional spaces from recent work.</p>
+          <h3>Selected visual fragments</h3>
+          <p>A silent montage of fragments, textures, gestures, and emotional spaces from recent work.</p>
         </div>
 
         <div class="showreel-wrap">
@@ -863,8 +891,8 @@
   <section class="poster-section" id="posters">
     <div class="container">
       <div class="eyebrow">Poster studies</div>
-      <h2>Posters from recent work.</h2>
-      <p class="poster-note">Selected poster studies from my recent short films — less a catalogue than a glimpse of recurring moods: night, youth, distance, and ordinary spaces charged with feeling.</p>
+      <h2>Visual worlds from earlier shorts.</h2>
+      <p class="poster-note">Selected poster studies from Iason’s short films — less a catalogue than a glimpse of recurring moods: night, youth, distance, and ordinary spaces charged with feeling.</p>
 
       <div class="poster-grid poster-grid-refined">
         <article class="poster-card">
@@ -874,20 +902,20 @@
             <p>A restrained domestic short about family, distance, and the emotional residue left inside ordinary spaces.</p>
           </div>
         </article>
-   
-        <article class="poster-card">
-          <img src="smoke-signals-poster.jpg" alt="Poster study for Smoke Signals">
-          <div class="poster-caption">
-            <h3>Smoke Signals</h3>
-            <p>A stylised short built around silence, colour, and sexual tension.</p>
-          </div>
-        </article>
-        
+
         <article class="poster-card">
           <img src="youthful-nights-poster.jpg" alt="Poster study for Youthful Nights">
           <div class="poster-caption">
             <h3>Youthful Nights</h3>
             <p>A nocturnal study of youth, longing, and fleeting connection.</p>
+          </div>
+        </article>
+
+        <article class="poster-card">
+          <img src="smoke-signals-poster.jpg" alt="Poster study for Smoke Signals">
+          <div class="poster-caption">
+            <h3>Smoke Signals</h3>
+            <p>A stylised short built around silence, colour, and emotional tension.</p>
           </div>
         </article>
       </div>
@@ -899,9 +927,9 @@
       <div class="eyebrow">Contact</div>
       <h2>For festivals, producers, and future collaborators.</h2>
       <p class="lead">For festival inquiries, producer conversations, development opportunities, or future collaborations, please get in touch directly.</p>
-      <a class="btn primary" href="mailto:contact@iasonboiangiufilms.com">✉ contact@iasonboiangiufilms.com</a>
+      <a class="btn primary" href="mailto:iasonboiangiu20@gmail.com">✉ iasonboiangiu20@gmail.com</a>
       <div class="contact-links">
-        <a href="https://iasonboiangiufilms.com" target="_blank" rel="noreferrer">iasonboiangiufilms.com</a>
+        <a href="https://iasonfilms.com" target="_blank" rel="noreferrer">iasonfilms.com</a>
       </div>
     </div>
   </section>
