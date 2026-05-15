@@ -703,7 +703,7 @@
 
   
 
-    /* FINAL ABOUT BACKGROUND PORTRAIT FIX */
+    /* FINAL MOBILE ABOUT + POSTER FIXES */
     .about {
       position: relative;
       overflow: hidden;
@@ -718,8 +718,8 @@
       height: 100%;
       object-fit: cover;
       object-position: center right;
-      opacity: .38;
-      filter: grayscale(1) contrast(1.06) brightness(.84);
+      opacity: .40;
+      filter: grayscale(1) contrast(1.06) brightness(.86);
       z-index: 0;
       pointer-events: none;
     }
@@ -745,27 +745,39 @@
       z-index: 2;
     }
 
+    .poster-grid-refined .poster-card img,
+    .poster-card img {
+      width: 100%;
+      aspect-ratio: 2 / 3;
+      height: auto;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 22px;
+      display: block;
+      background: #111;
+    }
+
     @media (max-width: 900px) {
       .about-bg {
         object-fit: cover;
         object-position: center top;
-        opacity: .34;
-        filter: grayscale(1) contrast(1.05) brightness(.86);
+        opacity: .38;
+        filter: grayscale(1) contrast(1.05) brightness(.88);
       }
 
       .about::after {
         background:
           linear-gradient(
             180deg,
-            rgba(18,18,18,.86) 0%,
-            rgba(18,18,18,.66) 34%,
-            rgba(18,18,18,.86) 100%
+            rgba(18,18,18,.84) 0%,
+            rgba(18,18,18,.60) 34%,
+            rgba(18,18,18,.84) 100%
           ),
           linear-gradient(
             90deg,
-            rgba(18,18,18,.70) 0%,
-            rgba(18,18,18,.42) 50%,
-            rgba(18,18,18,.70) 100%
+            rgba(18,18,18,.64) 0%,
+            rgba(18,18,18,.32) 50%,
+            rgba(18,18,18,.64) 100%
           );
       }
     }
@@ -813,7 +825,6 @@
           <span class="tag">Festival Submission</span>
           <span class="tag">Writer / Director</span>
         </div>
-        <a class="btn primary" href="https://youtu.be/BrdVpqEd-Tk" target="_blank" rel="noreferrer">▶ Open trailer</a>
       </div>
       <div class="video-card">
         <div class="video-wrap">
@@ -837,7 +848,7 @@
       </div>
       <div class="bio">
         <p>I’m a Romanian filmmaker currently based in Sheffield, UK.</p>
-        <p>I studied Physics and Philosophy at the University of Sheffield. However, cinema has always been the medium through which I felt most able to express myself and explore the intimacy, vulnerability, and emotional textures of everyday life.</p>
+        <p>I studied Physics and Philosophy at the University of Sheffield, though cinema has always been the medium through which I felt most able to express myself and explore the intimacy, vulnerability, and emotional textures of everyday life.</p>
         <p>I’m drawn to grounded, observational storytelling shaped by atmosphere, restraint, and a sense of poetry within ordinary spaces. My work has been influenced by filmmakers such as Wong Kar Wai, Wim Wenders, Luca Guadagnino, and Martin Scorsese.</p>
         <p>I began working in film on Radu Jude’s <a href="https://www.imdb.com/title/tt8506840/" target="_blank" rel="noreferrer"><em>I Do Not Care If We Go Down in History as Barbarians</em></a> before continuing across a range of productions, from independent grassroots projects to larger professional sets. In 2022, I helped revive and expand the Sheffield Filmmaking Society following the pandemic.</p>
         <p>My latest short film, <em>Embers in the Kitchen</em>, is currently being submitted to international festivals, while new projects are in development.</p>
@@ -858,7 +869,7 @@
 
       <div class="showreel-feature">
         <div class="showreel-copy">
-          <div class="eyebrow">Vignettes</div>
+          <div class="eyebrow">Visual reel</div>
           <h3>Visual fragments</h3>
           <p>A silent montage of textures, gestures, and emotional spaces from recent work.</p>
         </div>
@@ -916,8 +927,8 @@
   <section class="poster-section" id="posters">
     <div class="container">
       <div class="eyebrow">Poster studies</div>
-      <h2>Visual worlds from earlier shorts.</h2>
-      <p class="poster-note">Selected poster studies from Iason’s short films — less a catalogue than a glimpse of recurring moods: night, youth, distance, and ordinary spaces charged with feeling.</p>
+      <h2>Posters from recent work.</h2>
+      <p class="poster-note">Selected poster studies from my short films — less a catalogue than a glimpse of recurring moods: night, youth, distance, and ordinary spaces charged with feeling.</p>
 
       <div class="poster-grid poster-grid-refined">
         <article class="poster-card">
@@ -932,15 +943,15 @@
           <img src="smoke-signals-poster.jpg" alt="Poster study for Smoke Signals">
           <div class="poster-caption">
             <h3>Smoke Signals</h3>
-            <p>A brief exploration shaped by desire, ambiguity, and fleeting intimacy.</p>
+            <p>A stylised short of attraction, vulnerability, and emotional ambiguity.</p>
           </div>
-
         </article>
+
         <article class="poster-card">
           <img src="youthful-nights-poster.jpg" alt="Poster study for Youthful Nights">
           <div class="poster-caption">
             <h3>Youthful Nights</h3>
-            <p>A nocturnal study of youth, longing, and connection.</p>
+            <p>A nocturnal study of youth, longing, and fleeting connection.</p>
           </div>
         </article>
       
